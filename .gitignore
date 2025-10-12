@@ -1,0 +1,63 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+**/node_modules
+**/dist
+**/static
+
+dist-ssr
+*.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+
+# Python environments
+**/.venv/
+**/venv/
+
+# uv lock for dev tools/scripts
+dev/uv.lock
+
+# NPM modules
+**/node_modules
+
+# env
+**/.env.development
+**/.env.production
+**/.env
+**/*.local
+
+# Azure config
+.azure/
+
+# Intellij config
+__pycache__/
+.idea
+
+# notebook cache
+.ipynb_checkpoints/
+
+# Vite build index
+static/
+
+# cypress reports
+e2e/cypress/reports/
+
+# dev outputs and inputs
+/dev/indexer/docs/
+/dev/indexer/out/
