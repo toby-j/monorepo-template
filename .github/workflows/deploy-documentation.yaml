@@ -1,13 +1,7 @@
 name: Deploy documentation
 
 on:
-  workflow_call:
-    inputs:
-      deploy:
-        description: "Whether to deploy"
-        required: true
-        type: boolean
-        default: false
+  workflow_dispatch:
 
 permissions:
   contents: read
@@ -20,9 +14,11 @@ jobs:
   build:
     name: Build
     runs-on: ubuntu-latest
+
     defaults:
       run:
         working-directory: website
+
     steps:
       - uses: actions/checkout@v4
         with:
@@ -30,14 +26,17 @@ jobs:
           sparse-checkout: |
             website
             docs
+
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
           node-version: "lts/*"
           cache: npm
           cache-dependency-path: website/package-lock.json
+
       - run: npm ci
       - run: npm run build
+
       - name: Upload pages artefact
         if: ${{ inputs.deploy }}
         uses: actions/upload-pages-artifact@v3
@@ -46,7 +45,6 @@ jobs:
 
   deploy:
     name: Deploy
-    if: ${{ inputs.deploy }}
     needs:
       - build
     runs-on: ubuntu-latest

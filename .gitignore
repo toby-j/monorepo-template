@@ -61,3 +61,7 @@ e2e/cypress/reports/
 # dev outputs and inputs
 /dev/indexer/docs/
 /dev/indexer/out/
+
+# Remove locks due to this being a template
+**.lock
+package-lock.json
