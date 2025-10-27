@@ -6,13 +6,13 @@ const lightTheme: PrismTheme = themes.github;
 const darkTheme: PrismTheme = themes.dracula;
 
 const config: Config = {
-  title: "VOL Application",
-  tagline: "VOL documentation",
+  title: "Your App Title",
+  tagline: "Your App Tagline",
   favicon: "img/favicon.ico",
-  url: "https://dvsa.github.io",
+  url: "https://CapgeminiInventUK.github.io",
   baseUrl: "/monorepo-template/",
-  organizationName: "dvsa",
-  projectName: "vol-app",
+  organizationName: "acme",
+  projectName: "acme-app",
   trailingSlash: false,
 
   onBrokenLinks: "throw",
@@ -31,7 +31,7 @@ const config: Config = {
           sidebarPath: require.resolve("./sidebars.js"),
           routeBasePath: "/",
           path: "../docs",
-          editUrl: "https://github.com/dvsa/vol-app/tree/main/docs/",
+          editUrl: "https://github.com/CapgeminiInventUK/monorepo-template/docs/intro.md",
         },
         blog: false,
         theme: {
@@ -44,9 +44,9 @@ const config: Config = {
   themeConfig: {
     image: "img/docusaurus-social-card.jpg",
     navbar: {
-      title: "VOL Application",
+      title: "Your App Title",
       logo: {
-        alt: "Drive and Vehicle Standards Agency logo",
+        alt: "your-app-logo",
         src: "img/logo.svg",
       },
       items: [
@@ -56,7 +56,7 @@ const config: Config = {
           position: "left",
         },
         {
-          href: "https://github.com/dvsa/vol-app",
+          href: "https://github.com/CapgeminiInventUK",
           label: "GitHub",
           position: "right",
         },
@@ -64,7 +64,7 @@ const config: Config = {
     },
     footer: {
       style: "dark",
-      copyright: "All content is available under the Open Government Licence v3.0, except where otherwise stated.",
+      copyright: `Copyright © ${new Date().getFullYear()} Capgemini Invent.`,
     },
     prism: {
       theme: lightTheme,
